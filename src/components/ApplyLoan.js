@@ -10,11 +10,11 @@ class ApplyLoan extends Component {
 			email: '',
 			password: '',
 			loginvalidation:false,
-			loneType:'',
+			loanType:'',
 			applyDate:'',
-			loneAmount:'',
+			loanAmount:'',
 			intrestRate:'',
-			loneTenure:'',
+			loanTenure:'',
 
 		};
 
@@ -44,11 +44,11 @@ class ApplyLoan extends Component {
 
 			loanId:11,
 			customerId:custId,
-			loanType:this.state.loneType,
+			loanType:this.state.loanType,
 			loanApplyDate:this.state.applyDate,
-			loanAmount:this.state.loneAmount,
+			loanAmount:this.state.loanAmount,
 			rateOfInterest:this.state.intrestRate,
-			loanDuration:this.state.loneTenure,
+			loanDuration:this.state.loanTenure,
 		}
 		console.log("registerData"+applyData);
 		restApi.postData("http://localhost:9090/loan/applyloan", applyData);
@@ -68,6 +68,7 @@ class ApplyLoan extends Component {
 
 
 					<div className="loneType">
+					<label>Lone Type</label>
 						<input
 							type="text"
 							placeholder="Lone Type"
@@ -78,6 +79,7 @@ class ApplyLoan extends Component {
 					</div>
 
 					<div className="applyDate">
+					<label>Apply Date</label>
 						<input
 							type="text"
 							placeholder="Apply Date"
@@ -87,17 +89,19 @@ class ApplyLoan extends Component {
 						/>
 					</div>
 
-					<div className="loneAmount">
+					<div className="loanAmount">
+					<label>Loan Amount</label>
 						<input
 							type="text"
-							placeholder="Lone Amount"
-							name="loneAmount"
-							value={this.state.loneAmount}
+							placeholder="Loan Amount"
+							name="loanAmount"
+							value={this.state.loanAmount}
 							onChange={this.update}
 						/>
 					</div>
 
 					<div className="intrestRate">
+					<label>Intrest Rate</label>
 						<input
 							type="text"
 							placeholder="Intrest Rate"
@@ -107,12 +111,13 @@ class ApplyLoan extends Component {
 						/>
 					</div>
 
-					<div className="loneTenure">
+					<div className="loanTenure">
+					<label>Loan Tenure</label>
 						<input
 							type="text"
-							placeholder="Lone Tenure"
-							name="loneTenure"
-							value={this.state.loneTenure}
+							placeholder="Loan Tenure"
+							name="loanTenure"
+							value={this.state.loanTenure}
 							onChange={this.update}
 						/>
 					</div>

@@ -102,6 +102,7 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<form onSubmit={this.displayLogin}>
+					<h2>Welcome to bms</h2>
 					<h2>Login</h2>
 					<div className="username">
 					<label>Username</label>
@@ -115,6 +116,7 @@ class Login extends Component {
 					</div>
 
 					<div className="password">
+					<label>Password</label>
 						<input
 							type="password"
 							placeholder="Password..."
